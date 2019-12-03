@@ -45,6 +45,7 @@ homebrew_cask_apps:
   - telegram
   - spotify
   - virtualbox
+  - discord
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 # TODO: See how to override mas_email and mas_password without
