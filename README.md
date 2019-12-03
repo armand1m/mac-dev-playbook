@@ -1,6 +1,8 @@
 # Mac Development Ansible Playbook
 
-[![Build Status](https://travis-ci.org/geerlingguy/mac-dev-playbook.svg?branch=master)](https://travis-ci.org/geerlingguy/mac-dev-playbook)
+**Attention:** This is a fork from geerlingguy/mac-dev-playbook with my own modifications. Use at your own risk.
+
+[![Build Status](https://travis-ci.org/armand1m/mac-dev-playbook.svg?branch=master)](https://travis-ci.org/armand1m/mac-dev-playbook)
 
 This playbook installs and configures most of the software I use on my Mac for web and software development. Some things in macOS are slightly difficult to automate, so I still have some manual installation steps, but at least it's all documented here.
 
@@ -65,55 +67,11 @@ Any variable can be overridden in `config.yml`; see the supporting roles' docume
 
 ## Included Applications / Configuration (Default)
 
-Applications (installed with Homebrew Cask):
+See the [`default.config.yml`](https://github.com/armand1m/mac-dev-playbook/blob/d2527c3e8f34e9fadb88b38d38059f1e2c158dd9/default.config.yml).
 
-  - [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/)
-  - [Docker](https://www.docker.com/)
-  - [Dropbox](https://www.dropbox.com/)
-  - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
-  - [Google Chrome](https://www.google.com/chrome/)
-  - [Handbrake](https://handbrake.fr/)
-  - [Homebrew](http://brew.sh/)
-  - [LICEcap](http://www.cockos.com/licecap/)
-  - [LimeChat](http://limechat.net/mac/)
-  - [MacVim](http://macvim-dev.github.io/macvim/)
-  - [nvALT](http://brettterpstra.com/projects/nvalt/)
-  - [Sequel Pro](https://www.sequelpro.com/) (MySQL client)
-  - [Skitch](https://evernote.com/skitch/)
-  - [Slack](https://slack.com/)
-  - [Sublime Text](https://www.sublimetext.com/)
-  - [Transmit](https://panic.com/transmit/) (S/FTP client)
-  - [Vagrant](https://www.vagrantup.com/)
+My [dotfiles](https://github.com/armand1m/dotfiles) are also installed into the current user's home directory, including the `.osx` dotfile for configuring many aspects of macOS for better performance and ease of use.
 
-Packages (installed with Homebrew):
-
-  - autoconf
-  - bash-completion
-  - doxygen
-  - gettext
-  - gifsicle
-  - git
-  - go
-  - gpg
-  - hub
-  - httpie
-  - iperf
-  - libevent
-  - sqlite
-  - mcrypt
-  - nmap
-  - node
-  - nvm
-  - php
-  - ssh-copy-id
-  - cowsay
-  - readline
-  - openssl
-  - pv
-  - wget
-  - wrk
-
-My [dotfiles](https://github.com/geerlingguy/dotfiles) are also installed into the current user's home directory, including the `.osx` dotfile for configuring many aspects of macOS for better performance and ease of use. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
+You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
 
 Finally, there are a few other preferences and settings added on for various apps and services.
 
@@ -123,20 +81,7 @@ Finally, there are a few other preferences and settings added on for various app
 
 It's my hope that I can get the rest of these things wrapped up into Ansible playbooks soon, but for now, these steps need to be completed manually (assuming you already have Xcode and Ansible installed, and have run this playbook).
 
-  1. Set JJG-Term as the default Terminal theme (it's installed, but not set as default automatically).
-  2. Install [Sublime Package Manager](http://sublime.wbond.net/installation).
-  3. Install all the apps that aren't yet in this setup (see below).
   4. Remap Caps Lock to Escape (requires macOS Sierra 10.12.1+).
-  5. Set trackpad tracking rate.
-  6. Set mouse tracking rate.
-  7. Configure extra Mail and/or Calendar accounts (e.g. Google, Exchange, etc.).
-
-### Applications/packages to be added:
-
-These are mostly direct download links, some are more difficult to install because of custom installers or other nonstandard install quirks:
-
-  - [iShowU HD](http://www.shinywhitebox.com/downloads/iShowU_HD_2.3.20.dmg)
-  - [Adobe Creative Cloud](http://www.adobe.com/creativecloud.html)
 
 ### Configuration to be added:
 
@@ -154,7 +99,7 @@ These are mostly direct download links, some are more difficult to install becau
 
 Many people have asked me if I often wipe my entire workstation and start from scratch just to test changes to the playbook. Nope! Instead, I posted instructions for how I build a [Mac OS X VirtualBox VM](https://github.com/geerlingguy/mac-osx-virtualbox-vm), on which I can continually run and re-run this playbook to test changes and make sure things work correctly.
 
-Additionally, this project is [continuously tested on Travis CI's macOS infrastructure](https://travis-ci.org/geerlingguy/mac-dev-playbook).
+Additionally, this project is [continuously tested on Travis CI's macOS infrastructure](https://travis-ci.org/armand1m/mac-dev-playbook).
 
 ## Ansible for DevOps
 

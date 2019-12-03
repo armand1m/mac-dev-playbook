@@ -3,6 +3,7 @@ downloads: ~/.ansible-downloads/
 
 configure_dotfiles: yes
 configure_osx: yes
+configure_zsh: yes
 
 dotfiles_repo: https://github.com/armand1m/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
