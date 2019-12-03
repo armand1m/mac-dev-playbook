@@ -28,6 +28,8 @@ homebrew_installed_packages:
   - node
   - openssl
   - wrk
+  - htop
+  - bat
 
 homebrew_taps:
   - homebrew/core
