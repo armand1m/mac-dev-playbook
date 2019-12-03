@@ -20,10 +20,9 @@
     - role: geerlingguy.mas
       when: mas_installed_apps
       tags: ['mas']
-    - role: gantsign.antigen
+    - role: viasite-ansible.zsh
       when: configure_zsh
-      users:
-        - username: "{{ ansible_user_id }}"
+      tags: ['zsh']
 
   tasks:
     - include_tasks: tasks/ansible-setup.yml

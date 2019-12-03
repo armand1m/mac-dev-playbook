@@ -29,6 +29,9 @@ homebrew_installed_packages:
   - node
   - openssl
   - wrk
+  - zsh
+  - git
+  - wget
 
 homebrew_taps:
   - homebrew/core

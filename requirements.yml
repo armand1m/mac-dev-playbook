@@ -2,4 +2,4 @@
 - name: geerlingguy.dotfiles
 - name: geerlingguy.homebrew
 - name: geerlingguy.mas
-- name: gantsign.antigen
+- name: viasite-ansible.zsh
