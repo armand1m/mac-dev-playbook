@@ -1,0 +1,30 @@
+homebrew_installed_packages:
+  - dockutil
+  - autoconf
+  - bash-completion
+  - go
+  - gpg
+  - iperf
+  - libevent
+  - sqlite
+  - nmap
+  - node
+  - openssl
+  - wrk
+  - htop
+  - bat
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - docker
+  - dropbox
+  - google-chrome
+  - firefox
+  - visual-studio-code
+  - telegram
+  - spotify
+  - discord
