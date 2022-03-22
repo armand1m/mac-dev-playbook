@@ -24,10 +24,11 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: https://github.com/armand1m/dotfiles.git
 dotfiles_repo_accept_hostkey: true
-dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_repo_local_destination: ~/Projects/Personal/dotfiles
 dotfiles_files:
+  - .bash_profile
   - .zshrc
   - .gitignore
   - .inputrc
@@ -35,52 +36,45 @@ dotfiles_files:
   - .vimrc
 
 homebrew_installed_packages:
-  # - ansible # Installed via Pip.
-  - autoconf
   - bash-completion
-  - doxygen
-  - gettext
-  - gifsicle
-  - git
-  - github/gh/gh
-  - go
   - gpg
-  - httpie
-  - iperf
-  - libevent
   - sqlite
-  - mcrypt
   - nmap
-  - node
   - nvm
-  - php
-  - ssh-copy-id
-  - cowsay
-  - readline
   - openssl
-  - pv
-  - wget
-  - wrk
-  - zsh-history-substring-search
+  - htop
+  - exa
+  - bat
+  - istioctl
+  - terraform
+  - pwgen
+  - pgcli
+  - dbmate
+  - neovim
+  - koekeishiya/formulae/yabai
+  - koekeishiya/formulae/skhd
+  - pure
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - koekeishiya/formulae
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - chromedriver
   - docker
-  - dropbox
-  - firefox
-  - google-chrome
-  - handbrake
-  - licecap
-  - sequel-ace
-  - slack
-  - sublime-text
-  - transmit
-  - vagrant
+  - telegram 
+  - visual-studio-code
+  - discord
+  - spotify
+  - google-cloud-sdk
+  - karabiner-elements
+  - remarkable
+  - kensington-trackball-works
+  - elgato-control-center
+  - displaylink
+
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
@@ -111,21 +105,6 @@ pip_packages: []
 
 # Set to 'true' to configure Sublime Text.
 configure_sublime: false
-sublime_base_path: '~/Library/Application Support/Sublime Text'
-sublime_config_path: "Packages/User"
-sublime_package_control:
-  - "DocBlockr"
-  - "Dockerfile Syntax Highlighting"
-  - "FileDiffs"
-  - "GitHub Flavored Markdown Preview"
-  - "Jinja2"
-  - "Package Control"
-  - "PHP-Twig"
-  - "Pretty JSON"
-  - "SublimeLinter"
-  - "SublimeLinter-contrib-yamllint"
-  - "TrailingSpaces"
-  - "WordCount"
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
