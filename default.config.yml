@@ -18,17 +18,22 @@ dockitems_persist: []
 #   pos: 5
 
 configure_sudoers: false
-sudoers_custom_config: ''
-# Example:
-# sudoers_custom_config: |
-#   # Allow users in admin group to use sudo with no password.
-#   %admin ALL=(ALL) NOPASSWD: ALL
+sudoers_custom_config: |
+  # create a new file for writing - visudo uses the vim editor by default.
+  # go read about this if you have no idea what is going on.
+  sudo visudo -f /private/etc/sudoers.d/yabai
+
+  # input the line below into the file you are editing.
+  # replace <user> with your username (output of: whoami). 
+  # change the path to the yabai binary if necessary  (output of: which yabai)
+  amagalhaes ALL = (root) NOPASSWD: /usr/local/bin/yabai --load-sa
 
 dotfiles_repo: https://github.com/armand1m/dotfiles.git
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Projects/Personal/dotfiles
 dotfiles_files:
-  - .bash_profile
+  - .yabairc
+  - .skhdrc
   - .zshrc
   - .gitignore
   - .inputrc
