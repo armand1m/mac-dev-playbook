@@ -1,16 +1,117 @@
 ---
-homebrew_installed_packages:
-  - autoconf
-  - bash-completion
-  - gettext
-  - sqlite
-  - ssh-copy-id
-  - cowsay
-  - readline
-  - pv
-  - wget
-  - wrk
+downloads: ~/.ansible-downloads/
 
+configure_dotfiles: true
+configure_terminal: true
+configure_osx: true
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: false
+dockitems_remove: []
+# - Launchpad
+# - TV
+# - Podcasts
+# - 'App Store'
+dockitems_persist: []
+# - name: "Sublime Text"
+#   path: "/Applications/Sublime Text.app/"
+#   pos: 5
+
+configure_sudoers: false
+sudoers_custom_config: |
+  # create a new file for writing - visudo uses the vim editor by default.
+  # go read about this if you have no idea what is going on.
+  sudo visudo -f /private/etc/sudoers.d/yabai
+
+  # input the line below into the file you are editing.
+  # replace <user> with your username (output of: whoami). 
+  # change the path to the yabai binary if necessary  (output of: which yabai)
+  amagalhaes ALL = (root) NOPASSWD: /usr/local/bin/yabai --load-sa
+
+dotfiles_repo: https://github.com/armand1m/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/Projects/Personal/dotfiles
+dotfiles_files:
+  - .yabairc
+  - .skhdrc
+  - .config
+  - .zshrc
+  - .gitignore
+  - .gitconfig
+  - .inputrc
+  - .osx
+  - .vimrc
+
+homebrew_installed_packages:
+  - dockutil
+  - bash-completion
+  - gpg
+  - sqlite
+  - nmap
+  - openssl
+  - htop
+  - exa
+  - bat
+  - istioctl
+  - terraform
+  - pwgen
+  - pgcli
+  - dbmate
+  - neovim
+  - koekeishiya/formulae/yabai
+  - koekeishiya/formulae/skhd
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+  - koekeishiya/formulae
+  - homebrew/cask-drivers
+
+homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - firefox
-  - licecap
+  - chromedriver
+  - docker
+  - telegram 
+  - visual-studio-code
+  - discord
+  - spotify
+  - google-cloud-sdk
+  - karabiner-elements
+  - remarkable
+  - kensingtonworks 
+  - elgato-control-center
+  - displaylink
+
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+# - name: drush
+#   state: present # present/absent, default: present
+#   version: "^8.1" # default: N/A
+gem_packages: []
+# - name: bundler
+#   state: present # present/absent/latest, default: present
+#   version: "~> 1.15.1" # default: N/A
+npm_packages: []
+# - name: webpack
+#   state: present # present/absent/latest, default: present
+#   version: "^2.6" # default: N/A
+pip_packages: []
+# - name: mkdocs
+#   state: present # present/absent/latest, default: present
+#   version: "0.16.3" # default: N/A
+
+# Set to 'true' to configure Sublime Text.
+configure_sublime: false
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []

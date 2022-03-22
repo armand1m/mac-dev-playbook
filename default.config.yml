@@ -34,18 +34,20 @@ dotfiles_repo_local_destination: ~/Projects/Personal/dotfiles
 dotfiles_files:
   - .yabairc
   - .skhdrc
+  - .config
   - .zshrc
   - .gitignore
+  - .gitconfig
   - .inputrc
   - .osx
   - .vimrc
 
 homebrew_installed_packages:
+  - dockutil
   - bash-completion
   - gpg
   - sqlite
   - nmap
-  - nvm
   - openssl
   - htop
   - exa
@@ -58,12 +60,12 @@ homebrew_installed_packages:
   - neovim
   - koekeishiya/formulae/yabai
   - koekeishiya/formulae/skhd
-  - pure
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
   - koekeishiya/formulae
+  - homebrew/cask-drivers
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -76,7 +78,7 @@ homebrew_cask_apps:
   - google-cloud-sdk
   - karabiner-elements
   - remarkable
-  - kensington-trackball-works
+  - kensingtonworks 
   - elgato-control-center
   - displaylink
 
