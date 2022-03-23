@@ -19,14 +19,7 @@ dockitems_persist: []
 
 configure_sudoers: false
 sudoers_custom_config: |
-  # create a new file for writing - visudo uses the vim editor by default.
-  # go read about this if you have no idea what is going on.
-  sudo visudo -f /private/etc/sudoers.d/yabai
-
-  # input the line below into the file you are editing.
-  # replace <user> with your username (output of: whoami). 
-  # change the path to the yabai binary if necessary  (output of: which yabai)
-  amagalhaes ALL = (root) NOPASSWD: /usr/local/bin/yabai --load-sa
+  amagalhaes ALL = (root) NOPASSWD: /opt/homebrew/bin/yabai --load-sa
 
 dotfiles_repo: https://github.com/armand1m/dotfiles.git
 dotfiles_repo_accept_hostkey: true
@@ -81,6 +74,7 @@ homebrew_cask_apps:
   - kensingtonworks 
   - elgato-control-center
   - displaylink
+  - ubersicht
 
 
 # See `geerlingguy.mas` role documentation for usage instructions.
