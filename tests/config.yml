@@ -71,7 +71,6 @@ homebrew_cask_apps:
   - google-cloud-sdk
   - karabiner-elements
   - remarkable
-  - kensingtonworks
   - elgato-control-center
   - displaylink
   - ubersicht
