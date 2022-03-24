@@ -19,14 +19,7 @@ dockitems_persist: []
 
 configure_sudoers: false
 sudoers_custom_config: |
-  # create a new file for writing - visudo uses the vim editor by default.
-  # go read about this if you have no idea what is going on.
-  sudo visudo -f /private/etc/sudoers.d/yabai
-
-  # input the line below into the file you are editing.
-  # replace <user> with your username (output of: whoami). 
-  # change the path to the yabai binary if necessary  (output of: which yabai)
-  amagalhaes ALL = (root) NOPASSWD: /usr/local/bin/yabai --load-sa
+  amagalhaes ALL = (root) NOPASSWD: /opt/homebrew/bin/yabai --load-sa
 
 dotfiles_repo: https://github.com/armand1m/dotfiles.git
 dotfiles_repo_accept_hostkey: true
@@ -64,51 +57,52 @@ homebrew_installed_packages:
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
-  - koekeishiya/formulae
   - homebrew/cask-drivers
+  - koekeishiya/formulae
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - chromedriver
   - docker
-  - telegram 
+  - telegram
   - visual-studio-code
   - discord
   - spotify
   - google-cloud-sdk
   - karabiner-elements
   - remarkable
-  - kensingtonworks 
+  - kensingtonworks
   - elgato-control-center
   - displaylink
-
+  - ubersicht
+  - lens
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
-mas_email: ""
-mas_password: ""
+mas_email: ''
+mas_password: ''
 
-osx_script: "~/.osx --no-restart"
+osx_script: ~/.osx --no-restart
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
 composer_packages: []
 # - name: drush
-#   state: present # present/absent, default: present
-#   version: "^8.1" # default: N/A
+#   state: present  # present/absent, default: present
+#   version: "^8.1"  # default: N/A
 gem_packages: []
 # - name: bundler
-#   state: present # present/absent/latest, default: present
-#   version: "~> 1.15.1" # default: N/A
+#   state: present  # present/absent/latest, default: present
+#   version: "~> 1.15.1"  # default: N/A
 npm_packages: []
 # - name: webpack
-#   state: present # present/absent/latest, default: present
-#   version: "^2.6" # default: N/A
+#   state: present  # present/absent/latest, default: present
+#   version: "^2.6"  # default: N/A
 pip_packages: []
 # - name: mkdocs
-#   state: present # present/absent/latest, default: present
-#   version: "0.16.3" # default: N/A
+#   state: present  # present/absent/latest, default: present
+#   version: "0.16.3"  # default: N/A
 
 # Set to 'true' to configure Sublime Text.
 configure_sublime: false
