@@ -17,9 +17,9 @@ dockitems_persist: []
 #   path: "/Applications/Sublime Text.app/"
 #   pos: 5
 
-configure_sudoers: false
+configure_sudoers: true
 sudoers_custom_config: |
-  amagalhaes ALL = (root) NOPASSWD: /opt/homebrew/bin/yabai --load-sa
+  amagalhaes ALL=(root) NOPASSWD: /opt/homebrew/bin/yabai --load-sa
 
 dotfiles_repo: https://github.com/armand1m/dotfiles.git
 dotfiles_repo_accept_hostkey: true
@@ -41,9 +41,9 @@ homebrew_installed_packages:
   - gpg
   - sqlite
   - nmap
+  - eza
   - openssl
   - htop
-  - exa
   - bat
   - istioctl
   - terraform
@@ -51,17 +51,19 @@ homebrew_installed_packages:
   - pgcli
   - dbmate
   - neovim
+  - ffmpeg
+  - pure
   - koekeishiya/formulae/yabai
   - koekeishiya/formulae/skhd
+  - FelixKratz/formulae/sketchybar
 
-homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
-  - koekeishiya/formulae
-  - homebrew/cask-drivers
+homebrew_taps: 
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - google-chrome
+  - zed
+  - warp
   - chromedriver
   - docker
   - telegram
@@ -71,11 +73,12 @@ homebrew_cask_apps:
   - google-cloud-sdk
   - karabiner-elements
   - remarkable
-  - kensingtonworks
   - elgato-control-center
   - displaylink
   - ubersicht
-  - lens
+  - font-hack-nerd-font
+  - sf-symbols
+  - raycast
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
